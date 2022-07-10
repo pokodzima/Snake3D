@@ -9,7 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcfc2a6351f28794caa78d2a98d1ae46, type: 3}
-  m_Name: ChainPool
+  m_Script: {fileID: 11500000, guid: 7e80b8f4928295b4c830581382e48eaa, type: 3}
+  m_Name: ItemsData
   m_EditorClassIdentifier: 
-  chainPrefab: {fileID: 3963249572346117412, guid: 6af201b02e9521f42a39010b962f0a84, type: 3}
+  spawnBoundaries: {x: 23, y: 0, z: 23}
+  spawnPositionOffset: {x: 0, y: 0.5, z: 0}
+  maxFoodOnSceneCount: 5
+  currentFoodOnSceneCount: 0
+  spawnRateInSeconds: 2
+  spawnTimer: 2

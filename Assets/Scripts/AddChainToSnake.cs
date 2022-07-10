@@ -5,9 +5,8 @@ using UnityEngine;
 
 public class AddChainToSnake : MonoBehaviour
 {
-    [SerializeField] private GameObject chainPrefab;
     [SerializeField] private PlayerData playerData;
-    [SerializeField] private ChainPool chainPool;
+    [SerializeField] private ScriptableObjectPool chainPool;
 
     private void Start()
     {

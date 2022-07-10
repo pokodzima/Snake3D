@@ -290,7 +290,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80945cce62ece114c93eb77908ecd6da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chainPrefab: {fileID: 3963249572346117412, guid: 6af201b02e9521f42a39010b962f0a84, type: 3}
   playerData: {fileID: 11400000, guid: eec97548f6a6f6a449eabcb893c97317, type: 2}
   chainPool: {fileID: 11400000, guid: 040c3abfee4329b4b9d08319e3bb8085, type: 2}
 --- !u!1001 &6316303065898867582

@@ -265,6 +265,55 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 473666895}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &610273871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 610273872}
+  - component: {fileID: 610273873}
+  m_Layer: 0
+  m_Name: ItemSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &610273872
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610273871}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &610273873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610273871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9138bbc24f9ef6647ba8a2803c575f43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsData: {fileID: 11400000, guid: cc428f4e7d45e36429c80ef320abe06c, type: 2}
+  foodPools:
+  - {fileID: 11400000, guid: cc7283098006e8646a2fbe880cef8f60, type: 2}
+  - {fileID: 11400000, guid: ed537b80e4f6b3746b06f3b51ecbdc69, type: 2}
+  - {fileID: 11400000, guid: b533c1e7b38ad044fbc02350f8885b26, type: 2}
 --- !u!1 &631525998
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,7 +441,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.77
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -649,7 +698,7 @@ GameObject:
   - component: {fileID: 1010801582}
   - component: {fileID: 1010801581}
   m_Layer: 0
-  m_Name: ChainPoolInitializer
+  m_Name: PoolsInitializer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -668,7 +717,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: eec97548f6a6f6a449eabcb893c97317, type: 2}
+  itemsData: {fileID: 11400000, guid: cc428f4e7d45e36429c80ef320abe06c, type: 2}
   chainPool: {fileID: 11400000, guid: 040c3abfee4329b4b9d08319e3bb8085, type: 2}
+  cubeFoodRedPool: {fileID: 11400000, guid: b533c1e7b38ad044fbc02350f8885b26, type: 2}
+  cubeFoodGreenPool: {fileID: 11400000, guid: ed537b80e4f6b3746b06f3b51ecbdc69, type: 2}
+  cubeFoodBluePool: {fileID: 11400000, guid: cc7283098006e8646a2fbe880cef8f60, type: 2}
 --- !u!4 &1010801582
 Transform:
   m_ObjectHideFlags: 0
