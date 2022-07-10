@@ -5,8 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class RotateRigidbody : MonoBehaviour
 {
-    [SerializeField] private float velocity;
     [SerializeField] private InputData inputData;
+    [SerializeField] private PlayerData playerData;
 
     private Rigidbody _rigidbody;
 
@@ -17,6 +17,6 @@ public class RotateRigidbody : MonoBehaviour
     
     void FixedUpdate()
     {
-        _rigidbody.angularVelocity = new Vector3(0f, inputData.turnInput * velocity, 0f);
+        _rigidbody.angularVelocity = new Vector3(0f, inputData.turnInput * playerData.snakeTurnSpeed, 0f);
     }
 }

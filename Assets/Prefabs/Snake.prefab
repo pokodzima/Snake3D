@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 6363576204669127468}
   - component: {fileID: 6363576204669127470}
   - component: {fileID: 6363576204669127471}
+  - component: {fileID: 1135844805604656331}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -213,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79eae4d910182945a5e45c26f6de025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 5
+  playerData: {fileID: 11400000, guid: eec97548f6a6f6a449eabcb893c97317, type: 2}
 --- !u!114 &6363576204669127471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,8 +227,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f5ea9c724dfa446a73a1a86842067a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 5
   inputData: {fileID: 11400000, guid: 282104c389b0df44d9a04879d4cfcfd7, type: 2}
+  playerData: {fileID: 11400000, guid: eec97548f6a6f6a449eabcb893c97317, type: 2}
+--- !u!114 &1135844805604656331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6363576204669127469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80945cce62ece114c93eb77908ecd6da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: eec97548f6a6f6a449eabcb893c97317, type: 2}
+  itemsData: {fileID: 11400000, guid: cc428f4e7d45e36429c80ef320abe06c, type: 2}
+  chainPool: {fileID: 11400000, guid: 040c3abfee4329b4b9d08319e3bb8085, type: 2}
 --- !u!1 &6363576205107038675
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,7 +254,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6363576205107038674}
   - component: {fileID: 8174030828161866983}
-  - component: {fileID: -3611468622533667695}
   m_Layer: 0
   m_Name: Snake
   m_TagString: Untagged
@@ -278,20 +293,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialLastChain: {fileID: 6964902932377790042}
   playerData: {fileID: 11400000, guid: eec97548f6a6f6a449eabcb893c97317, type: 2}
---- !u!114 &-3611468622533667695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6363576205107038675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80945cce62ece114c93eb77908ecd6da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerData: {fileID: 11400000, guid: eec97548f6a6f6a449eabcb893c97317, type: 2}
-  chainPool: {fileID: 11400000, guid: 040c3abfee4329b4b9d08319e3bb8085, type: 2}
 --- !u!1001 &6316303065898867582
 PrefabInstance:
   m_ObjectHideFlags: 0

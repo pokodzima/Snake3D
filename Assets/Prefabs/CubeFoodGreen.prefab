@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 7527471759689768717}
   - component: {fileID: 7527471759689768714}
   - component: {fileID: 7527471759689768715}
+  - component: {fileID: 3401845795132002251}
   m_Layer: 0
   m_Name: CubeFoodGreen
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,8 +93,21 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7527471759689768712}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3401845795132002251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7527471759689768712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c506d65992baad4889f73cdd7190041, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pool: {fileID: 11400000, guid: ed537b80e4f6b3746b06f3b51ecbdc69, type: 2}

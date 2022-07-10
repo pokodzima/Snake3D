@@ -15,6 +15,4 @@ MonoBehaviour:
   spawnBoundaries: {x: 23, y: 0, z: 23}
   spawnPositionOffset: {x: 0, y: 0.5, z: 0}
   maxFoodOnSceneCount: 5
-  currentFoodOnSceneCount: 0
   spawnRateInSeconds: 2
-  spawnTimer: 2

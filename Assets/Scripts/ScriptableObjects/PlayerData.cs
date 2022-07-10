@@ -10,5 +10,10 @@ public class PlayerData : ScriptableObject
    public GameObject lastChainGameObject;
    
    public int maxSnakeSize;
+   [NonSerialized]
    public int currentSnakeSize;
+
+   public float snakeForwardSpeed;
+   public float snakeTurnSpeed;
+
 }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class PushForward : MonoBehaviour
+public class MoveForward : MonoBehaviour
 {
-    [SerializeField] private float velocity;
+    [SerializeField] private PlayerData playerData;
 
     private Rigidbody _rigidbody;
     void Start()
@@ -15,6 +15,6 @@ public class PushForward : MonoBehaviour
     
     void FixedUpdate()
     {
-        _rigidbody.velocity = velocity * transform.forward;
+        _rigidbody.velocity = playerData.snakeForwardSpeed * transform.forward;
     }
 }

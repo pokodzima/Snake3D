@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ab102f98b678a045ac92731aa963c2e, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  maxSnakeSize: 10
-  currentSnakeSize: 5
+  maxSnakeSize: 15
+  snakeForwardSpeed: 5
+  snakeTurnSpeed: 5

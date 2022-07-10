@@ -3,16 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AddChainToSnake : MonoBehaviour
+public class EatFood : MonoBehaviour
 {
     [SerializeField] private PlayerData playerData;
+    [SerializeField] private ItemsData itemsData;
     [SerializeField] private ScriptableObjectPool chainPool;
-
-    private void Start()
-    {
-        InvokeRepeating(nameof(AddChain), 5f, 5f);
-    }
-
+    private const string FoodTag = "Food";
     private void AddChain()
     {
         if (playerData.maxSnakeSize == playerData.currentSnakeSize) return;
@@ -23,7 +19,7 @@ public class AddChainToSnake : MonoBehaviour
                        playerData.lastChainGameObject.transform.forward;
         chain.transform.position = position;
         chain.transform.rotation = playerData.lastChainGameObject.transform.rotation;
-        chain.transform.parent = transform;
+        chain.transform.parent = transform.parent;
         
         chain.GetComponent<ConfigurableJoint>().connectedBody =
             playerData.lastChainGameObject.GetComponent<Rigidbody>();
@@ -31,5 +27,15 @@ public class AddChainToSnake : MonoBehaviour
         playerData.lastChainGameObject = chain;
 
         playerData.currentSnakeSize++;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag(FoodTag))
+        {
+            itemsData.currentFoodOnSceneCount--;
+            AddChain();
+            other.GetComponent<SendFoodToPool>().SendBackToPool();
+        }
     }
 }
