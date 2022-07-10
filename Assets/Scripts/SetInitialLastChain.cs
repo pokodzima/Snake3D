@@ -10,6 +10,7 @@ public class SetInitialLastChain : MonoBehaviour
     void Start()
     {
         playerData.lastChainGameObject = initialLastChain;
+        playerData.currentSnakeSize = 3;
     }
     
 }

@@ -7,19 +7,30 @@ public class AddChainToSnake : MonoBehaviour
 {
     [SerializeField] private GameObject chainPrefab;
     [SerializeField] private PlayerData playerData;
+    [SerializeField] private ChainPool chainPool;
 
     private void Start()
     {
-        InvokeRepeating(nameof(AddChain),5f, 5f);
+        InvokeRepeating(nameof(AddChain), 5f, 5f);
     }
 
     private void AddChain()
     {
+        if (playerData.maxSnakeSize == playerData.currentSnakeSize) return;
+
+        var chain = chainPool.GetFromPool();
+        
         var position = playerData.lastChainGameObject.transform.position -
                        playerData.lastChainGameObject.transform.forward;
-        var chain = Instantiate(chainPrefab, position, playerData.lastChainGameObject.transform.rotation, transform);
+        chain.transform.position = position;
+        chain.transform.rotation = playerData.lastChainGameObject.transform.rotation;
+        chain.transform.parent = transform;
+        
         chain.GetComponent<ConfigurableJoint>().connectedBody =
             playerData.lastChainGameObject.GetComponent<Rigidbody>();
+        
         playerData.lastChainGameObject = chain;
+
+        playerData.currentSnakeSize++;
     }
 }
