@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 6363576204669127470}
   - component: {fileID: 6363576204669127471}
   - component: {fileID: 1135844805604656331}
+  - component: {fileID: 1727631268877752897}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -244,6 +245,22 @@ MonoBehaviour:
   playerData: {fileID: 11400000, guid: eec97548f6a6f6a449eabcb893c97317, type: 2}
   itemsData: {fileID: 11400000, guid: cc428f4e7d45e36429c80ef320abe06c, type: 2}
   chainPool: {fileID: 11400000, guid: 040c3abfee4329b4b9d08319e3bb8085, type: 2}
+  timerData: {fileID: 11400000, guid: 6403b5bd51ae76848b54765ad4dda5de, type: 2}
+--- !u!114 &1727631268877752897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6363576204669127469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b712292c5daea847a644a3645969709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: eec97548f6a6f6a449eabcb893c97317, type: 2}
+  timerData: {fileID: 11400000, guid: 6403b5bd51ae76848b54765ad4dda5de, type: 2}
+  chainPool: {fileID: 11400000, guid: 040c3abfee4329b4b9d08319e3bb8085, type: 2}
 --- !u!1 &6363576205107038675
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,7 +308,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c19698dba040adf4ea433a3c3ae521f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialLastChain: {fileID: 6964902932377790042}
+  initialChains:
+  - {fileID: 4813773527413205509}
+  - {fileID: 6964902932377790042}
   playerData: {fileID: 11400000, guid: eec97548f6a6f6a449eabcb893c97317, type: 2}
 --- !u!1001 &6316303065898867582
 PrefabInstance:
@@ -308,10 +327,6 @@ PrefabInstance:
       propertyPath: m_ConnectedBody
       value: 
       objectReference: {fileID: 4813773527413205512}
-    - target: {fileID: 3963249572346117414, guid: 6af201b02e9521f42a39010b962f0a84, type: 3}
-      propertyPath: m_ConnectedAnchor.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3963249572346117415, guid: 6af201b02e9521f42a39010b962f0a84, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -383,6 +398,10 @@ PrefabInstance:
       propertyPath: m_ConnectedBody
       value: 
       objectReference: {fileID: 6363576204669127468}
+    - target: {fileID: 3963249572346117414, guid: 6af201b02e9521f42a39010b962f0a84, type: 3}
+      propertyPath: m_AutoConfigureConnectedAnchor
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3963249572346117415, guid: 6af201b02e9521f42a39010b962f0a84, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -429,6 +448,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6af201b02e9521f42a39010b962f0a84, type: 3}
+--- !u!1 &4813773527413205509 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3963249572346117412, guid: 6af201b02e9521f42a39010b962f0a84, type: 3}
+  m_PrefabInstance: {fileID: 8488651945228900129}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4813773527413205510 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3963249572346117415, guid: 6af201b02e9521f42a39010b962f0a84, type: 3}

@@ -5,17 +5,20 @@ using UnityEngine;
 public class ItemSpawner : MonoBehaviour
 {
     [SerializeField] private ItemsData itemsData;
+    [SerializeField] private PlayerData playerData;
 
     [SerializeField] private ScriptableObjectPool[] foodPools;
 
     void Start()
     {
         itemsData.spawnTimer = itemsData.spawnRateInSeconds;
+        itemsData.currentFoodOnSceneCount = 0;
     }
 
 
     void Update()
     {
+        if (playerData.gameOver) return;
         if (itemsData.currentFoodOnSceneCount == itemsData.maxFoodOnSceneCount) return;
 
         itemsData.spawnTimer -= Time.deltaTime;

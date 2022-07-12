@@ -6,14 +6,12 @@ using UnityEngine;
 [CreateAssetMenu]
 public class PlayerData : ScriptableObject
 {
-   [NonSerialized]
-   public GameObject lastChainGameObject;
-   
-   public int maxSnakeSize;
-   [NonSerialized]
-   public int currentSnakeSize;
+    [NonSerialized] public List<GameObject> chainList;
 
-   public float snakeForwardSpeed;
-   public float snakeTurnSpeed;
+    public int maxSnakeSize;
 
+    public float snakeForwardSpeed;
+    public float snakeTurnSpeed;
+
+    [NonSerialized] public bool gameOver;
 }

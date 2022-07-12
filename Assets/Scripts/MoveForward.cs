@@ -15,6 +15,7 @@ public class MoveForward : MonoBehaviour
     
     void FixedUpdate()
     {
+        if (playerData.gameOver) return;
         _rigidbody.velocity = playerData.snakeForwardSpeed * transform.forward;
     }
 }

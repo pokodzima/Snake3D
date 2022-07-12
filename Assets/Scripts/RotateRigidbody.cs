@@ -17,6 +17,7 @@ public class RotateRigidbody : MonoBehaviour
     
     void FixedUpdate()
     {
+        if (playerData.gameOver) return;
         _rigidbody.angularVelocity = new Vector3(0f, inputData.turnInput * playerData.snakeTurnSpeed, 0f);
     }
 }
